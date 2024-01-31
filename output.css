@@ -1,0 +1,914 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/Raleway/static/Raleway-Regular.ttf);
+}
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway";
+  letter-spacing: 0.1rem;
+  margin: 0%;
+  padding: 0%;
+}
+
+h1 {
+  color: #dbdbdb;
+  font-size: 3.3em;
+}
+
+h2,
+h3 {
+  color: #fee715;
+}
+
+p,
+a,
+li,
+input,
+textarea,
+button {
+  font-family: "Poppins";
+  color: #dbdbdb;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10em 10% 2em;
+}
+
+.global-animation {
+  position: relative;
+  overflow: hidden;
+}
+.global-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: #101820;
+  z-index: 2;
+  transition: left 6s ease;
+}
+
+.global-animation-2 {
+  position: relative;
+  overflow: hidden;
+}
+.global-animation-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: #10253b;
+  z-index: 2;
+  transition: left 6s ease;
+}
+
+.global-animation.init-animation::before {
+  left: 200%;
+}
+
+@keyframes rotating-span {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+header {
+  background-color: #10253b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+.nav-wrapper {
+  background-color: var(--nav-background-color);
+  justify-content: space-between;
+  display: flex;
+  transition: 0.5s ease-out;
+  padding: 1em 10% 1em 10%;
+  max-width: 100%;
+  z-index: 1000;
+}
+.nav-wrapper ul {
+  margin: 0%;
+  padding: 0%;
+  gap: 2.3em;
+  display: flex;
+  justify-content: space-around;
+}
+.nav-wrapper ul li {
+  list-style: none;
+}
+.nav-wrapper ul li a {
+  text-decoration: none;
+  color: #dbdbdb;
+  font-weight: bolder;
+}
+
+#hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.nav-wrapper a:hover {
+  color: #fee715;
+  transition: color 0.6s ease;
+}
+
+.nav-animation {
+  position: relative;
+  overflow: hidden;
+}
+.nav-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: var(--before-background);
+  z-index: 2;
+  transition: left 6s ease;
+}
+
+.nav-animation.init-animation::before {
+  left: 200%;
+}
+
+.main-change-nav-bar-color {
+  background-color: #101820;
+}
+
+.main-name-section {
+  background-color: #101820;
+}
+
+.main-wrapper h1 {
+  margin: 10% 0 0.3em;
+}
+.main-wrapper p {
+  max-width: 55%;
+}
+
+.main-buttons {
+  margin-top: 1em;
+  display: flex;
+  gap: 1.1em;
+}
+.main-buttons a {
+  font-family: "Raleway";
+  font-size: 1.3rem;
+  font-weight: bolder;
+  text-decoration: none;
+  display: inline-flex;
+  border: 2px solid #fee715;
+  border-radius: 0.7em;
+  width: 9rem;
+  cursor: pointer;
+  padding: 0.5em;
+  margin-top: 1em;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  justify-content: center;
+}
+.main-buttons :nth-child(1) {
+  background-color: #fee715;
+  color: #101820;
+}
+.main-buttons :nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #101820;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.main-buttons :nth-child(1):hover::before {
+  width: 100%;
+}
+.main-buttons :nth-child(1):hover {
+  color: #fee715;
+}
+.main-buttons :nth-child(2) {
+  color: #fee715;
+}
+.main-buttons :nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fee715;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.main-buttons :nth-child(2):hover::before {
+  width: 100%;
+}
+.main-buttons :nth-child(2):hover {
+  color: #101820;
+}
+
+.main-icons {
+  margin-top: 2.5%;
+  display: flex;
+  gap: 1rem;
+}
+.main-icons .main-linkeding-icon a,
+.main-icons .main-github-icon a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0.2rem solid #fee715;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fee715;
+  font-weight: 100;
+  z-index: 1;
+  overflow: hidden;
+}
+.main-icons .main-linkeding-icon a svg,
+.main-icons .main-github-icon a svg {
+  width: 60%;
+  height: auto;
+}
+.main-icons .main-linkeding-icon a::before,
+.main-icons .main-github-icon a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fee715;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.main-icons .main-linkeding-icon a:hover::before,
+.main-icons .main-github-icon a:hover::before {
+  width: 100%;
+}
+.main-icons .main-linkeding-icon a:hover svg path,
+.main-icons .main-github-icon a:hover svg path {
+  fill: #101820;
+}
+.main-icons a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0.2rem solid #fee715;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 100;
+  color: #fee715;
+  z-index: 1;
+  overflow: hidden;
+}
+.main-icons a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fee715;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.main-icons a:hover::before {
+  width: 100%;
+}
+.main-icons a:hover {
+  color: #101820;
+}
+
+.main-about-section {
+  background-color: #10253b;
+}
+.main-about-section h2 {
+  text-align: center;
+  color: #dbdbdb;
+  margin-bottom: 1em;
+  font-size: 2.3em;
+}
+.main-about-section span {
+  color: #fee715;
+}
+.main-about-section p {
+  font-size: larger;
+  margin-top: 3%;
+}
+.main-about-section .main-cta {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.main-cta-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  color: #fee715;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.main-cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fee715;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.main-cta-button:hover::before {
+  width: 100%;
+}
+.main-cta-button:hover {
+  color: #101820;
+  text-decoration: underline;
+}
+
+.main-img-wrapper {
+  position: relative;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.main-img-wrapper img {
+  width: 50%;
+  border: 2px solid #fee715;
+  border-radius: 50%;
+}
+.main-img-wrapper span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 55%;
+  height: 95%;
+  border-radius: 50%;
+  border-left: 0.2rem solid #fee715;
+  border-right: 0.2rem solid #fee715;
+  border-top: 1px solid #10253b;
+  border-bottom: 1px solid #10253b;
+  animation: rotating-span 10s infinite linear;
+}
+
+.education-section {
+  background-color: #101820;
+}
+.education-section .main-education-and-pro-skills-wrapper {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.education-section .main-education-and-pro-skills-wrapper h2 {
+  font-size: 2.2em;
+  color: #dbdbdb;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fee715;
+  opacity: 15%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content:hover::before {
+  width: 100%;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content .year {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content .year i {
+  font-size: 1.1rem;
+  color: #dbdbdb;
+}
+.education-section .item-1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+}
+.education-section .item-2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+.education-section .item-3 {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  grid-row-end: span 2;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+.education-section .item-4 {
+  grid-column-start: 1;
+  grid-row-start: 6;
+  grid-row-end: span 2;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+.education-section .item-5 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.education-section .item-6 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+.education-section .item-7 {
+  grid-column-start: 2;
+  grid-row-start: 4;
+  grid-row-end: span 2;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+.education-section .item-8 {
+  grid-column-start: 2;
+  grid-row-start: 6;
+  grid-row-end: span 2;
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+
+.skills-section {
+  background-color: #10253b;
+}
+.skills-section h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 2em;
+  color: #dbdbdb;
+}
+.skills-section h2 span {
+  color: #fee715;
+}
+.skills-section .skills-wrapper {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  width: 100%;
+}
+.skills-section .skills-wrapper .coding-skills,
+.skills-section .skills-wrapper .professional-skills {
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  width: 50%;
+  padding: 1rem;
+}
+.skills-section .skills-wrapper .coding-skills h3,
+.skills-section .skills-wrapper .professional-skills h3 {
+  color: #dbdbdb;
+  margin-bottom: 10%;
+}
+.skills-section .skills-wrapper .coding-skills .skills-content-box,
+.skills-section .skills-wrapper .professional-skills .skills-content-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.skills-section .skills-wrapper .coding-skills .skills-content-box .skills-content,
+.skills-section .skills-wrapper .professional-skills .skills-content-box .skills-content {
+  max-width: 20%;
+  text-align: center;
+  width: 100%;
+}
+.skills-section .skills-wrapper .coding-skills .skills-content-box .skills-content img,
+.skills-section .skills-wrapper .professional-skills .skills-content-box .skills-content img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-section {
+  background-color: #101820;
+}
+.contact-section h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.contact-resume-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.contact-resume-button a {
+  width: 40%;
+  height: 2rem;
+  color: #10253b;
+  background-color: #fee715;
+  border-radius: 0.6rem;
+  display: none;
+}
+.contact-resume-button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #101820;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.contact-resume-button a:hover {
+  color: #fee715;
+  text-decoration: none;
+}
+
+.contact-wrapper {
+  display: flex;
+  margin-top: 5rem;
+}
+.contact-wrapper .contact-resume {
+  width: 60%;
+  height: auto;
+}
+.contact-wrapper .contact-resume img {
+  width: 100%;
+  height: auto;
+}
+.contact-wrapper .contact-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contact-wrapper .contact-info .contact-specific-info {
+  height: auto;
+  display: flex;
+  margin-left: 30%;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  border-bottom: 0.1rem solid #fee715;
+  align-items: center;
+}
+.contact-wrapper .contact-info .contact-specific-info img {
+  width: 5rem;
+  height: auto;
+}
+.contact-wrapper .contact-info .contact-specific-info p,
+.contact-wrapper .contact-info .contact-specific-info a {
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.contact-links {
+  display: flex;
+  margin-left: 30%;
+  gap: 1rem;
+}
+.contact-links .contact-linkedin-icon a,
+.contact-links .contact-github-icon a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0.2rem solid #fee715;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fee715;
+  font-weight: 100;
+  z-index: 1;
+  overflow: hidden;
+}
+.contact-links .contact-linkedin-icon a svg,
+.contact-links .contact-github-icon a svg {
+  width: 60%;
+  height: auto;
+}
+.contact-links .contact-linkedin-icon a::before,
+.contact-links .contact-github-icon a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fee715;
+  opacity: 100%;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.contact-links .contact-linkedin-icon a:hover::before,
+.contact-links .contact-github-icon a:hover::before {
+  width: 100%;
+}
+.contact-links .contact-linkedin-icon a:hover svg path,
+.contact-links .contact-github-icon a:hover svg path {
+  fill: #101820;
+}
+
+.form-section {
+  background-color: #10253b;
+}
+.form-section .form-wrapper .form-contact-form {
+  margin: 5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 30%;
+  padding: 1.3rem;
+  border-radius: 0.6rem;
+}
+.form-section .form-wrapper .form-contact-form input,
+.form-section .form-wrapper .form-contact-form textarea,
+.form-section .form-wrapper .form-contact-form button {
+  background-color: transparent;
+  border: 0.2rem solid #fee715;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  outline: none;
+}
+.form-section .form-wrapper .form-contact-form input::placeholder,
+.form-section .form-wrapper .form-contact-form textarea::placeholder {
+  color: #dbdbdb;
+}
+.form-section .form-wrapper .form-contact-form button {
+  background-color: #fee715;
+  color: #10253b;
+  width: 35%;
+  font-size: 1.1rem;
+}
+
+#note {
+  font-size: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-img-wrapper {
+    width: 50%;
+  }
+  .main-img-wrapper span {
+    height: 90%;
+    width: 52%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-wrapper #hamburger-btn {
+    display: block;
+  }
+  .nav-wrapper #hamburger-btn::before {
+    content: "☰";
+    color: #fee715;
+    font-size: 1.5rem;
+  }
+  .nav-wrapper #hamburger-btn.active::before {
+    content: "⤬";
+    color: #fee715;
+    font-size: 1.5rem;
+  }
+  .nav-wrapper ul {
+    position: fixed;
+    left: -100%;
+    top: 8%;
+    flex-direction: column;
+    background: #10253b;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+    gap: 1em;
+  }
+  .nav-wrapper ul.active {
+    left: 0;
+  }
+  .nav-wrapper ul li:hover {
+    background: #101820;
+  }
+  .education-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .skills-section .skills-wrapper {
+    flex-direction: column;
+    gap: 5vh;
+  }
+  .skills-section .skills-wrapper .coding-skills,
+  .skills-section .skills-wrapper .professional-skills {
+    width: 90%;
+  }
+  .main-img-wrapper {
+    width: 50%;
+  }
+  .main-img-wrapper span {
+    height: 70%;
+  }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-wrapper .contact-resume {
+    margin: auto;
+  }
+  .contact-wrapper .contact-resume-button a {
+    display: inline;
+    text-align: center;
+    margin: 1em 0;
+  }
+  .contact-wrapper .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .contact-wrapper .contact-info .contact-specific-info {
+    margin-left: 0%;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: end;
+  }
+  .contact-wrapper .contact-info .contact-specific-info img {
+    width: 2rem;
+    height: auto;
+  }
+  .contact-wrapper .contact-info .contact-specific-info p {
+    margin: 1rem 0 0 0;
+  }
+  .form-section .form-wrapper .form-contact-form {
+    width: 70%;
+  }
+  .form-section .form-wrapper .form-contact-form button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main-wrapper p {
+    min-width: 100%;
+  }
+  .main-img-wrapper img {
+    width: 90%;
+  }
+  .main-img-wrapper span {
+    height: 70%;
+    width: 95%;
+  }
+  .main-education-and-pro-skills-wrapper {
+    display: flex !important;
+    flex-direction: column;
+    grid-template-rows: 0;
+  }
+  .skills-wrapper {
+    width: 100%;
+  }
+  .skills-wrapper .coding-skills {
+    max-width: 89%;
+  }
+  .skills-wrapper .professional-skills {
+    max-width: 89%;
+  }
+  .contact-wrapper {
+    margin-top: 3rem;
+  }
+  .contact-wrapper .contact-resume {
+    min-width: 100%;
+    display: none;
+  }
+  .contact-wrapper .contact-resume-button a {
+    display: inline;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .form-wrapper h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main-img-wrapper {
+    width: 75%;
+  }
+  .main-img-wrapper span {
+    height: 90%;
+    width: 95%;
+  }
+  .contact-resume-button a {
+    font-size: 1.2rem;
+  }
+  .skills-section .skills-wrapper .coding-skills,
+  .skills-section .skills-wrapper .professional-skills {
+    width: 88%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-img-wrapper {
+    width: 70%;
+  }
+  .main-img-wrapper span {
+    height: 72%;
+    width: 95%;
+  }
+  .main-img-wrapper .contact-resume-button a {
+    font-size: 1rem;
+  }
+  .skills-section h2 {
+    font-size: 2.3rem;
+  }
+  .skills-section .skills-wrapper .coding-skills,
+  .skills-section .skills-wrapper .professional-skills {
+    max-width: 85%;
+  }
+  .contact-section h2 {
+    font-size: 2.5rem;
+  }
+  .contact-resume-button a {
+    display: inline;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,65 @@
+.nav-wrapper {
+  background-color: var(--nav-background-color);
+
+  justify-content: space-between;
+  display: flex;
+  transition: 0.5s ease-out;
+  padding: 1em 10% 1em 10%;
+  max-width: 100%;
+
+  z-index: 1000;
+
+  ul {
+    @include set-to-zero();
+    gap: 2.3em;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $main-text-color;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+#hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.nav-wrapper a:hover {
+  color: $main-underline-color;
+  transition: color 0.6s ease;
+}
+
+// Animation global pour la nav
+.nav-animation {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: var(--before-background);
+    z-index: 2;
+    transition: left 6s ease;
+  }
+}
+
+.nav-animation.init-animation::before {
+  left: 200%;
+}
+
+// Change color on y scroll
+
+.main-change-nav-bar-color {
+  background-color: $main-background-color;
+}

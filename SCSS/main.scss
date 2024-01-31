@@ -1,0 +1,456 @@
+// Main Section #########################################################
+
+.main-name-section {
+  background-color: $main-background-color;
+}
+
+.main-wrapper {
+  h1 {
+    margin: 10% 0 0.3em;
+  }
+
+  p {
+    max-width: 55%;
+  }
+}
+
+// Buttons ##############################################################
+
+.main-buttons {
+  margin-top: 1em;
+  display: flex;
+  gap: 1.1em;
+
+  a {
+    font-family: "Raleway";
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    display: inline-flex;
+    border: 2px solid $main-underline-color;
+    border-radius: 0.7em;
+    width: 9rem;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-top: 1em;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    justify-content: center;
+  }
+  :nth-child(1) {
+    background-color: $main-underline-color;
+    color: $main-background-color;
+    &::before {
+      @include animation-on-hover(100%, $main-background-color);
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &:hover {
+      color: $main-underline-color;
+    }
+  }
+  :nth-child(2) {
+    color: $main-underline-color;
+    &::before {
+      @include animation-on-hover(100%, $main-underline-color);
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &:hover {
+      color: $main-background-color;
+    }
+  }
+}
+
+// Icons main##############################################################
+
+.main-icons {
+  margin-top: 2.5%;
+  display: flex;
+  gap: 1rem;
+
+  .main-linkeding-icon,
+  .main-github-icon {
+    @include svg-animation();
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0.2rem solid $main-underline-color;
+    border-radius: 50%;
+    font: {
+      size: 20px;
+      weight: 100;
+    }
+    color: $main-underline-color;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+      @include animation-on-hover(100%, $main-underline-color);
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &:hover {
+      color: $main-background-color;
+    }
+  }
+}
+
+// About section ##########################################################
+
+.main-about-section {
+  background-color: $second-background-color;
+
+  h2 {
+    text-align: center;
+    color: $main-text-color;
+    margin-bottom: 1em;
+    font-size: 2.3em;
+  }
+
+  span {
+    color: $main-underline-color;
+  }
+
+  p {
+    font-size: larger;
+    margin-top: 3%;
+  }
+
+  .main-cta {
+    text-align: center;
+    margin-top: 5rem;
+  }
+}
+
+.main-cta-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  color: $main-underline-color;
+  @include grid-border();
+  font-size: 1.4rem;
+  text-decoration: none;
+
+  &::before {
+    @include animation-on-hover(100%, $main-underline-color);
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    color: $main-background-color;
+    text-decoration: underline;
+  }
+}
+
+.main-img-wrapper {
+  position: relative;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  img {
+    width: 50%;
+    border: 2px solid $main-underline-color;
+    border-radius: 50%;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 55%;
+    height: 95%;
+    border-radius: 50%;
+    border: {
+      left: 0.2rem solid #fee715;
+      right: 0.2rem solid #fee715;
+      top: 1px solid $second-background-color;
+      bottom: 1px solid $second-background-color;
+    }
+    animation: rotating-span 10s infinite linear;
+  }
+}
+
+// Education section #####################################################
+
+.education-section {
+  background-color: $main-background-color;
+
+  .main-education-and-pro-skills-wrapper {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    h2 {
+      font-size: 2.2em;
+      color: $main-text-color;
+    }
+
+    .education-content {
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+
+      &::before {
+        @include animation-on-hover(15%, $main-underline-color);
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+
+      .year {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        i {
+          font-size: 1.1rem;
+          color: $main-text-color;
+        }
+      }
+    }
+  }
+
+  .item-1 {
+    @include grid-position(1, 1, 1);
+  }
+  .item-2 {
+    @include grid-position(1, 2, 2);
+    @include grid-border();
+  }
+  .item-3 {
+    @include grid-position(1, 4, 2);
+    @include grid-border();
+  }
+  .item-4 {
+    @include grid-position(1, 6, 2);
+    @include grid-border();
+  }
+  .item-5 {
+    @include grid-position(2, 1, 2);
+  }
+  .item-6 {
+    @include grid-position(2, 2, 2);
+    @include grid-border();
+  }
+  .item-7 {
+    @include grid-position(2, 4, 2);
+    @include grid-border();
+  }
+  .item-8 {
+    @include grid-position(2, 6, 2);
+    @include grid-border();
+  }
+}
+
+// Skill section ##########################################################
+
+.skills-section {
+  h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 2em;
+    color: $main-text-color;
+
+    span {
+      color: $main-underline-color;
+    }
+  }
+
+  background-color: $second-background-color;
+
+  .skills-wrapper {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    width: 100%;
+
+    .coding-skills,
+    .professional-skills {
+      border: 0.2rem solid $main-underline-color;
+      border-radius: 0.6rem;
+      width: 50%;
+      padding: 1rem;
+
+      h3 {
+        color: $main-text-color;
+        margin-bottom: 10%;
+      }
+
+      .skills-content-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+
+        .skills-content {
+          max-width: 20%;
+          text-align: center;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Contact section #######################################################
+
+.contact-section {
+  background-color: $main-background-color;
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+.contact-resume-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  a {
+    width: 40%;
+    height: 2rem;
+    color: $second-background-color;
+    background-color: $main-underline-color;
+    border-radius: 0.6rem;
+    display: none;
+
+    &::before {
+      @include animation-on-hover(100%, $main-background-color);
+    }
+    &:hover {
+      color: $main-underline-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.contact-wrapper {
+  display: flex;
+  margin-top: 5rem;
+
+  .contact-resume {
+    width: 60%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contact-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .contact-specific-info {
+      height: auto;
+      display: flex;
+      margin-left: 30%;
+      padding-bottom: 2rem;
+      gap: 1rem;
+      border-bottom: 0.1rem solid $main-underline-color;
+      align-items: center;
+
+      img {
+        width: 5rem;
+        height: auto;
+      }
+
+      p,
+      a {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.contact-links {
+  display: flex;
+  margin-left: 30%;
+  gap: 1rem;
+
+  .contact-linkedin-icon,
+  .contact-github-icon {
+    @include svg-animation();
+  }
+}
+
+// Form section ##########################################################
+
+.form-section {
+  background-color: $second-background-color;
+
+  .form-wrapper {
+    .form-contact-form {
+      margin: 5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      width: 30%;
+      padding: 1.3rem;
+      border-radius: 0.6rem;
+
+      input,
+      textarea,
+      button {
+        background-color: transparent;
+        border: 0.2rem solid $main-underline-color;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        outline: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: $main-text-color;
+      }
+
+      button {
+        background-color: $main-underline-color;
+        color: $second-background-color;
+        width: 35%;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+#note {
+  font-size: 10px;
+  text-align: center;
+}

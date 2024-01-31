@@ -1,0 +1,117 @@
+// VAR COLORS
+$main-background-color: #101820;
+$main-text-color: #dbdbdb;
+$main-underline-color: #fee715;
+$second-background-color: #10253b;
+$white-theme-background-color: #ffffff;
+$white-theme-text-color: #000000;
+$white-main-underline-color: #777777;
+
+// FONT-FACE
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+// Mixins
+@mixin set-to-zero {
+  margin: 0%;
+  padding: 0%;
+}
+
+@mixin reset {
+  margin: initial;
+  padding: initial;
+  text-decoration: initial;
+  font-size: initial;
+}
+
+// Global
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  @include set-to-zero();
+  box-sizing: border-box;
+}
+
+// Titles
+h1,
+h2,
+h3 {
+  font-family: "Raleway";
+  letter-spacing: 0.1rem;
+  @include set-to-zero();
+}
+
+h1 {
+  color: $main-text-color;
+  font-size: 3.3em;
+}
+
+h2,
+h3 {
+  color: $main-underline-color;
+}
+
+// Paragraphs and text form
+p,
+a,
+li,
+input,
+textarea,
+button {
+  font-family: "Poppins";
+  color: $main-text-color;
+}
+
+// Taille de la fenêtre
+section {
+  min-height: 100vh;
+  padding: 10em 10% 2em;
+}
+
+// General animation
+@mixin animation-style($background-color) {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: $background-color;
+    z-index: 2;
+    transition: left 6s ease;
+  }
+}
+
+.global-animation {
+  @include animation-style($main-background-color);
+}
+
+.global-animation-2 {
+  @include animation-style($second-background-color);
+}
+
+.global-animation.init-animation::before {
+  left: 200%;
+}
+
+// Keyframes
+@keyframes rotating-span {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

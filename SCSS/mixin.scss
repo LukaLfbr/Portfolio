@@ -1,0 +1,59 @@
+@mixin grid-position($Cstart, $Rstart, $rowSpan: 1) {
+  grid-column-start: $Cstart;
+  grid-row-start: $Rstart;
+  grid-row-end: span $rowSpan;
+}
+
+@mixin grid-border {
+  border: 0.2rem solid $main-underline-color;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+
+@mixin animation-on-hover($opacity, $background-color) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: $background-color;
+  opacity: $opacity;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+
+@mixin svg-animation {
+  a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0.2rem solid #fee715;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fee715;
+    font-weight: 100;
+    z-index: 1;
+    overflow: hidden;
+
+    svg {
+      width: 60%;
+      height: auto;
+    }
+
+    &::before {
+      @include animation-on-hover(100%, $main-underline-color);
+    }
+    &:hover::before {
+      width: 100%;
+    }
+
+    &:hover svg path {
+      fill: $main-background-color;
+    }
+  }
+}
