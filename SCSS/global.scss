@@ -8,14 +8,6 @@ $white-theme-text-color: #000000;
 $white-main-underline-color: #777777;
 
 // FONT-FACE
-@font-face {
-  font-family: "Poppins";
-  src: url(fonts/Poppins/Poppins-Regular.ttf);
-}
-@font-face {
-  font-family: "Raleway";
-  src: url(fonts/Raleway/static/Raleway-Regular.ttf);
-}
 
 // Mixins
 @mixin set-to-zero {
@@ -45,7 +37,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   letter-spacing: 0.1rem;
   @include set-to-zero();
 }
@@ -67,7 +59,7 @@ li,
 input,
 textarea,
 button {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   color: $main-text-color;
 }
 
