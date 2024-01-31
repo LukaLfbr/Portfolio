@@ -20,8 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <!-- Script -->
-    <script src="JS/main-script.js"></script>
+    <!-- Scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -156,14 +156,19 @@
 
       <!-- About section-->
       <section class="main-about-section" id="about-section">
-        <h2 class="global-animation-nav">A propos de <span>moi</span></h2>
+        <h2 class="global-animation-nav" data-aos="fade-right">
+          A propos de <span>moi</span>
+        </h2>
 
-        <div class="main-img-wrapper global-animation global-animation-2">
+        <div
+          class="main-img-wrapper global-animation global-animation-2"
+          data-aos="zoom-in"
+        >
           <img src="assets/img/IMG_20221013_140353.jpg" alt="" />
           <span class="circle-spin"></span>
         </div>
 
-        <p class="global-animation global-animation-2">
+        <p class="global-animation global-animation-2" data-aos="fade-right">
           Depuis toujours passionné par le monde de l'informatique, de la
           cybersécurité et du développement, je me suis lancé dans la formation
           de <span>développeur Full-Stack</span> au sein de la 3W Academy. Je
@@ -174,7 +179,7 @@
           <span>une expérience précieuse et formatrice</span>.
         </p>
 
-        <div class="main-cta">
+        <div class="main-cta" data-aos="fade-up">
           <a href="#contact-section" class="main-cta-button">Parlons en !</a>
         </div>
       </section>
@@ -186,10 +191,12 @@
       >
         <div class="main-education-and-pro-skills-wrapper">
           <div class="section-title">
-            <h2 class="global-animation item-1">Mon parcours</h2>
+            <h2 data-aos="fade-right" class="global-animation item-1">
+              Mon parcours
+            </h2>
           </div>
 
-          <div class="education-content item-2">
+          <div data-aos="flip-left" class="education-content item-2">
             <div class="year">
               <i class="fa-regular fa-calendar"></i>
               <p>Janvier 2023 - Aujourd'hui</p>
@@ -202,7 +209,7 @@
             </p>
           </div>
 
-          <div class="education-content item-3">
+          <div data-aos="flip-left" class="education-content item-3">
             <div class="year">
               <i class="fa-regular fa-calendar"></i>
               <p>Octobre 2023 - Janvier 2023</p>
@@ -215,7 +222,7 @@
             </p>
           </div>
 
-          <div class="education-content item-4">
+          <div data-aos="flip-left" class="education-content item-4">
             <div class="year">
               <i class="fa-regular fa-calendar"></i>
               <p>2021 - 2022</p>
@@ -230,10 +237,12 @@
 
           <!-- Expériences Section -->
           <div class="section-title">
-            <h2 class="global-animation item-5">Mes expériences</h2>
+            <h2 data-aos="fade-left" class="global-animation item-5">
+              Mes expériences
+            </h2>
           </div>
 
-          <div class="education-content item-6">
+          <div data-aos="flip-right" class="education-content item-6">
             <div class="year">
               <i class="fa-regular fa-calendar"></i>
               <p>Août 2022 - Octobre 2023</p>
@@ -247,7 +256,7 @@
             </p>
           </div>
 
-          <div class="education-content item-7">
+          <div data-aos="flip-right" class="education-content item-7">
             <div class="year">
               <i class="fa-regular fa-calendar"></i>
               <p>Mai 2023 - Août 2023</p>
@@ -260,7 +269,7 @@
             </p>
           </div>
 
-          <div class="education-content item-8">
+          <div data-aos="flip-right" class="education-content item-8">
             <div class="year">
               <i class="fa-regular fa-calendar"></i>
               <p>Novembre 2017</p>
@@ -277,85 +286,88 @@
 
       <!-- skills section -->
       <section class="skills-section" id="skills-section">
-        <h2 class="global-animation global-animation-2">
+        <h2 data-aos="fade-up" class="global-animation global-animation-2">
           Mes <span>Compétences</span>
         </h2>
         <div class="skills-wrapper global-animation global-animation-2">
           <!-- Coding skills -->
-          <div class="coding-skills global-animation-nav">
+          <div data-aos="fade-up" class="coding-skills global-animation-nav">
             <h3>Compétences en code</h3>
-            <div class="skills-content-box">
+            <div data-aos="zoom-in" class="skills-content-box">
               <div class="skills-content">
                 <img src="assets/img/html.svg" alt="html icon" />
                 <p>HTML</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/css.svg" alt="css icon" />
                 <p>CSS</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/sass.svg" alt="sass icon" />
                 <p>Sass</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/js.svg" alt="js icon" />
                 <p>JavaScript</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/php.svg" alt="php icon" />
                 <p>Php</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/symfony.svg" alt="symfony icon" />
                 <p>Symfony</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/react.svg" alt="react icon" />
                 <p>React</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/angular.svg" alt="angular icon" />
                 <p>Angular</p>
               </div>
             </div>
           </div>
           <!-- Professional skils -->
-          <div class="professional-skills global-animation-nav">
+          <div
+            data-aos="fade-up"
+            class="professional-skills global-animation-nav"
+          >
             <h3>Compétences professionnelles</h3>
             <div class="skills-content-box">
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/github.svg" alt="github icon" />
                 <p>GitHub</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/trello.svg" alt="trello icon" />
                 <p>Trello</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/notion.svg" alt="notion icon" />
                 <p>Notion</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/discord.svg" alt="discord icon" />
                 <p>Discord</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/slack.svg" alt="slack icon" />
                 <p>Slack</p>
               </div>
 
-              <div class="skills-content">
+              <div data-aos="zoom-in" class="skills-content">
                 <img src="assets/img/marketing.svg" alt="thoothed-wheel icon" />
                 <p>Marketing</p>
               </div>
@@ -366,7 +378,7 @@
 
       <!-- Contact section -->
       <section class="contact-section global-animation" id="contact-section">
-        <h2 class="global-animation">Mes informations</h2>
+        <h2 data-aos="fade-up" class="global-animation">Mes informations</h2>
         <div class="contact-wrapper">
           <div class="contact-resume">
             <img src="assets/img/resume.jpg" alt="Resume of Luka Lefebvre" />
@@ -378,34 +390,43 @@
           </div>
 
           <div class="contact-info global-animation">
-            <div class="contact-specific-info">
+            <div data-aos="fade-left" class="contact-specific-info">
               <img src="assets/img/position.svg" alt="Location icon" />
               <p>Secteur Lillois</p>
             </div>
 
-            <div class="contact-specific-info global-animation">
+            <div
+              data-aos="fade-right"
+              class="contact-specific-info global-animation"
+            >
               <img src="assets/img/mail.svg" alt="calendar icon" />
               <a href="mailto:luka.lefebvrepro@gmail.com" target="_blank"
                 >luka.lefebvrepro@gmail.com</a
               >
             </div>
 
-            <div class="contact-specific-info global-animation">
+            <div
+              data-aos="fade-left"
+              class="contact-specific-info global-animation"
+            >
               <img src="assets/img/phone.svg" alt="calendar icon" />
               <p>+33 7 60 90 22 97</p>
             </div>
 
-            <div class="contact-specific-info global-animation">
+            <div
+              data-aos="fade-right"
+              class="contact-specific-info global-animation"
+            >
               <img src="assets/img/calendar.svg" alt="calendar icon" />
               <p>Disponible immédiatement</p>
             </div>
 
-            <div class="contact-specific-info">
+            <div data-aos="fade-left" class="contact-specific-info">
               <img src="assets/img/car.svg" alt="calendar icon" />
               <p>Permis B</p>
             </div>
 
-            <div class="contact-links">
+            <div data-aos="fade-left" class="contact-links">
               <div class="contact-linkedin-icon">
                 <a href="https://www.linkedin.com/in/luka-lefebvre1/"
                   ><svg
@@ -493,7 +514,7 @@
 
       <section class="form-section" id="form-section">
         <div class="form-wrapper">
-          <h1 class="global-animation global-animation-2">
+          <h1 data-aos="fade-right" class="global-animation global-animation-2">
             Envoyez moi un message !
           </h1>
           <form
@@ -530,10 +551,16 @@
             <button type="submit">Envoi</button>
           </form>
           <p id="note">
-            *Ce formulaire est fontionnel et enverra un message sur mon e-mail
+            *Ce formulaire est fontionnel et enverra un message sur mon e-mail*
           </p>
         </div>
       </section>
     </main>
+    <script src="JS/main-script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

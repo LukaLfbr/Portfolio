@@ -23,9 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //Calculate and trigger changeNavColor if scrollY is above 1100
   window.addEventListener("scroll", (event) => {
     let scroll_position = window.scrollY;
-    console.log(scroll_position);
 
-   
     changeNavBackgroundColor(scroll_position);
   });
 
@@ -40,11 +38,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function changeNavBackgroundColor(scroll_position) {
     let navBar = document.querySelector(".nav-wrapper");
     if (
-      scroll_position > homeSection.offsetTop + homeSection.offsetHeight - navHeight.offsetHeight && scroll_position < aboutSection.offsetHeight + aboutSection.offsetTop - navHeight.offsetHeight || 
-      scroll_position > educationSection.offsetHeight + educationSection.offsetTop - navHeight.offsetHeight && scroll_position < skillsSection.offsetHeight + skillsSection.offsetTop - navHeight.offsetHeight ||
+      (scroll_position >
+        homeSection.offsetTop +
+          homeSection.offsetHeight -
+          navHeight.offsetHeight &&
+        scroll_position <
+          aboutSection.offsetHeight +
+            aboutSection.offsetTop -
+            navHeight.offsetHeight) ||
+      (scroll_position >
+        educationSection.offsetHeight +
+          educationSection.offsetTop -
+          navHeight.offsetHeight &&
+        scroll_position <
+          skillsSection.offsetHeight +
+            skillsSection.offsetTop -
+            navHeight.offsetHeight) ||
       scroll_position > formSection.offsetTop - navHeight.offsetHeight
-
-   
     ) {
       navBar.style.setProperty("--nav-background-color", "#101820");
       navBar.style.setProperty("--before-background", "#101820");
@@ -53,6 +63,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
       navBar.style.setProperty("--before-background", "#10253b");
     }
   }
-
-  
 });
