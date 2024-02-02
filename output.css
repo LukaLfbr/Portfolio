@@ -592,17 +592,32 @@ h3 {
   text-decoration: none;
 }
 
+.resume-and-video-cv-button {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-wrapper {
   display: flex;
   margin-top: 5rem;
 }
 .contact-wrapper .contact-resume {
-  width: 60%;
+  width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contact-wrapper .contact-resume img {
   width: 100%;
   height: auto;
+}
+.contact-wrapper .contact-video-cv-button {
+  margin-top: 5%;
+  width: 60%;
+  text-align: center;
 }
 .contact-wrapper .contact-info {
   width: 40%;
@@ -775,6 +790,12 @@ h3 {
   .main-img-wrapper span {
     height: 70%;
   }
+  .resume-and-video-cv-button {
+    align-self: center;
+  }
+  .resume-and-video-cv-button .contact-video-cv-button {
+    margin-top: 10%;
+  }
   .contact-wrapper {
     display: flex;
     flex-direction: column;
@@ -841,6 +862,9 @@ h3 {
   .skills-wrapper .professional-skills {
     max-width: 89%;
   }
+  .resume-and-video-cv-button .contact-video-cv-button {
+    width: 100%;
+  }
   .contact-wrapper {
     margin-top: 3rem;
   }
@@ -891,6 +915,9 @@ h3 {
   .skills-section .skills-wrapper .coding-skills,
   .skills-section .skills-wrapper .professional-skills {
     max-width: 85%;
+  }
+  .resume-and-video-cv-button {
+    width: 100%;
   }
   .contact-section h2 {
     font-size: 2.5rem;

@@ -76,9 +76,17 @@
     }
   }
   // Contact setion
+  .resume-and-video-cv-button {
+    align-self: center;
+    .contact-video-cv-button {
+      margin-top: 10%;
+    }
+  }
+
   .contact-wrapper {
     display: flex;
     flex-direction: column;
+
     .contact-resume {
       margin: auto;
     }
@@ -127,7 +135,7 @@
   }
 }
 
-// 576########################################################################
+// 425########################################################################
 
 @media screen and (max-width: 425px) {
   // Main section
@@ -163,6 +171,11 @@
     }
   }
   // Contact section
+  .resume-and-video-cv-button {
+    .contact-video-cv-button {
+      width: 100%;
+    }
+  }
 
   .contact-wrapper {
     margin-top: 3rem;
@@ -243,6 +256,10 @@
   }
 
   // Contact section
+
+  .resume-and-video-cv-button {
+    width: 100%;
+  }
 
   .contact-section {
     h2 {
