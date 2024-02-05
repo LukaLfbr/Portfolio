@@ -506,6 +506,26 @@ h3 {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content .education-icon-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content .education-icon-wrapper img {
+  width: 2rem;
+  height: auto;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content .education-icon-wrapper .education-icon-content {
+  text-align: center;
+}
+.education-section .main-education-and-pro-skills-wrapper .education-content .education-icon-wrapper .education-icon-content p {
+  margin: 0;
+  font-size: 9px;
 }
 .education-section .main-education-and-pro-skills-wrapper .education-content::before {
   content: "";
@@ -781,6 +801,11 @@ h3 {
   .main-buttons :nth-child(3) {
     display: block;
     text-align: center;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .education-icon-wrapper {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 768px) {
