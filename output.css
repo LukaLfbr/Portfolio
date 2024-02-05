@@ -405,8 +405,56 @@ h3 {
   animation: rotating-span 10s infinite linear;
 }
 
-.education-section {
+.skills-section {
   background-color: #101820;
+}
+.skills-section h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 2em;
+  color: #dbdbdb;
+}
+.skills-section h2 span {
+  color: #fee715;
+}
+.skills-section .skills-wrapper {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  width: 100%;
+}
+.skills-section .skills-wrapper .coding-skills,
+.skills-section .skills-wrapper .professional-skills {
+  border: 0.2rem solid #fee715;
+  border-radius: 0.6rem;
+  width: 50%;
+  padding: 1rem;
+}
+.skills-section .skills-wrapper .coding-skills h3,
+.skills-section .skills-wrapper .professional-skills h3 {
+  color: #dbdbdb;
+  margin-bottom: 10%;
+}
+.skills-section .skills-wrapper .coding-skills .skills-content-box,
+.skills-section .skills-wrapper .professional-skills .skills-content-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.skills-section .skills-wrapper .coding-skills .skills-content-box .skills-content,
+.skills-section .skills-wrapper .professional-skills .skills-content-box .skills-content {
+  max-width: 20%;
+  text-align: center;
+  width: 100%;
+}
+.skills-section .skills-wrapper .coding-skills .skills-content-box .skills-content img,
+.skills-section .skills-wrapper .professional-skills .skills-content-box .skills-content img {
+  width: 100%;
+  height: auto;
+}
+
+.education-section {
+  background-color: #10253b;
 }
 .education-section .main-education-and-pro-skills-wrapper {
   display: grid;
@@ -506,54 +554,6 @@ h3 {
   padding: 1rem;
 }
 
-.skills-section {
-  background-color: #10253b;
-}
-.skills-section h2 {
-  font-size: 3em;
-  text-align: center;
-  margin-bottom: 2em;
-  color: #dbdbdb;
-}
-.skills-section h2 span {
-  color: #fee715;
-}
-.skills-section .skills-wrapper {
-  display: flex;
-  gap: 10%;
-  justify-content: center;
-  width: 100%;
-}
-.skills-section .skills-wrapper .coding-skills,
-.skills-section .skills-wrapper .professional-skills {
-  border: 0.2rem solid #fee715;
-  border-radius: 0.6rem;
-  width: 50%;
-  padding: 1rem;
-}
-.skills-section .skills-wrapper .coding-skills h3,
-.skills-section .skills-wrapper .professional-skills h3 {
-  color: #dbdbdb;
-  margin-bottom: 10%;
-}
-.skills-section .skills-wrapper .coding-skills .skills-content-box,
-.skills-section .skills-wrapper .professional-skills .skills-content-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-.skills-section .skills-wrapper .coding-skills .skills-content-box .skills-content,
-.skills-section .skills-wrapper .professional-skills .skills-content-box .skills-content {
-  max-width: 20%;
-  text-align: center;
-  width: 100%;
-}
-.skills-section .skills-wrapper .coding-skills .skills-content-box .skills-content img,
-.skills-section .skills-wrapper .professional-skills .skills-content-box .skills-content img {
-  width: 100%;
-  height: auto;
-}
-
 .contact-section {
   background-color: #101820;
 }
@@ -565,15 +565,12 @@ h3 {
 .contact-resume-button {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  display: none;
 }
 .contact-resume-button a {
-  width: 40%;
-  height: 2rem;
   color: #10253b;
   background-color: #fee715;
   border-radius: 0.6rem;
-  display: none;
 }
 .contact-resume-button a::before {
   content: "";
@@ -779,10 +776,11 @@ h3 {
   .skills-section .skills-wrapper {
     flex-direction: column;
     gap: 5vh;
+    align-items: center;
   }
   .skills-section .skills-wrapper .coding-skills,
   .skills-section .skills-wrapper .professional-skills {
-    width: 90%;
+    width: 80%;
   }
   .main-img-wrapper {
     width: 50%;
@@ -790,23 +788,30 @@ h3 {
   .main-img-wrapper span {
     height: 70%;
   }
+  .main-education-and-pro-skills-wrapper {
+    display: flex !important;
+    flex-direction: column;
+    grid-template-rows: 0;
+  }
   .resume-and-video-cv-button {
     align-self: center;
-  }
-  .resume-and-video-cv-button .contact-video-cv-button {
-    margin-top: 10%;
   }
   .contact-wrapper {
     display: flex;
     flex-direction: column;
   }
-  .contact-wrapper .contact-resume {
-    margin: auto;
+  .contact-wrapper .resume-and-video-cv-button {
+    gap: 3rem;
   }
-  .contact-wrapper .contact-resume-button a {
-    display: inline;
+  .contact-wrapper .resume-and-video-cv-button .contact-video-cv-button,
+  .contact-wrapper .resume-and-video-cv-button .contact-resume-button {
+    display: block;
+    width: 10rem;
     text-align: center;
-    margin: 1em 0;
+  }
+  .contact-wrapper .resume-and-video-cv-button .contact-video-cv-button a,
+  .contact-wrapper .resume-and-video-cv-button .contact-resume-button a {
+    width: 100%;
   }
   .contact-wrapper .contact-info {
     flex-direction: row;
@@ -848,11 +853,6 @@ h3 {
     height: 70%;
     width: 95%;
   }
-  .main-education-and-pro-skills-wrapper {
-    display: flex !important;
-    flex-direction: column;
-    grid-template-rows: 0;
-  }
   .skills-wrapper {
     width: 100%;
   }
@@ -862,21 +862,12 @@ h3 {
   .skills-wrapper .professional-skills {
     max-width: 89%;
   }
-  .resume-and-video-cv-button .contact-video-cv-button {
-    width: 100%;
-  }
   .contact-wrapper {
     margin-top: 3rem;
   }
   .contact-wrapper .contact-resume {
     min-width: 100%;
     display: none;
-  }
-  .contact-wrapper .contact-resume-button a {
-    display: inline;
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 2rem;
   }
   .form-wrapper h1 {
     font-size: 3rem;
@@ -890,13 +881,6 @@ h3 {
     height: 90%;
     width: 95%;
   }
-  .contact-resume-button a {
-    font-size: 1.2rem;
-  }
-  .skills-section .skills-wrapper .coding-skills,
-  .skills-section .skills-wrapper .professional-skills {
-    width: 88%;
-  }
 }
 @media screen and (max-width: 320px) {
   .main-img-wrapper {
@@ -906,9 +890,6 @@ h3 {
     height: 72%;
     width: 95%;
   }
-  .main-img-wrapper .contact-resume-button a {
-    font-size: 1rem;
-  }
   .skills-section h2 {
     font-size: 2.3rem;
   }
@@ -916,17 +897,8 @@ h3 {
   .skills-section .skills-wrapper .professional-skills {
     max-width: 85%;
   }
-  .resume-and-video-cv-button {
-    width: 100%;
-  }
   .contact-section h2 {
     font-size: 2.5rem;
-  }
-  .contact-resume-button a {
-    display: inline;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 2rem;
   }
 }
 

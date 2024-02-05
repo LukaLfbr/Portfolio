@@ -47,14 +47,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
             aboutSection.offsetTop -
             navHeight.offsetHeight) ||
       (scroll_position >
-        educationSection.offsetHeight +
-          educationSection.offsetTop -
-          navHeight.offsetHeight &&
+        skillsSection.offsetTop +
+          skillsSection.offsetHeight -
+          navBar.offsetHeight &&
         scroll_position <
-          skillsSection.offsetHeight +
-            skillsSection.offsetTop -
-            navHeight.offsetHeight) ||
-      scroll_position > formSection.offsetTop - navHeight.offsetHeight
+          educationSection.offsetTop +
+            educationSection.offsetHeight -
+            navBar.offsetHeight) ||
+      scroll_position > formSection.offsetTop - navBar.offsetHeight
     ) {
       navBar.style.setProperty("--nav-background-color", "#101820");
       navBar.style.setProperty("--before-background", "#101820");
