@@ -2,6 +2,18 @@
 
 .main-name-section {
   background-color: $main-background-color;
+  display: flex;
+  .main-video-wrapper {
+    width: 50%;
+    margin: 8% 5% 0 0;
+    padding-right: 0.2rem;
+    video {
+      width: 100%;
+      height: auto;
+      border: 1px solid $main-underline-color;
+      border-radius: 0.6rem;
+    }
+  }
 }
 
 .main-wrapper {
@@ -10,15 +22,18 @@
   }
 
   p {
-    max-width: 55%;
+    max-width: 80%;
   }
 }
+
+// Video ###################################################################
 
 // Buttons ##############################################################
 
 .main-buttons {
   margin-top: 1em;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.1em;
 
   a {
@@ -61,6 +76,20 @@
     }
     &:hover {
       color: $main-background-color;
+    }
+  }
+  :nth-child(3) {
+    background-color: $main-underline-color;
+    color: $main-background-color;
+    display: none;
+    &::before {
+      @include animation-on-hover(100%, $main-background-color);
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &:hover {
+      color: $main-underline-color;
     }
   }
 }

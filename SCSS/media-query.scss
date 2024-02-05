@@ -1,11 +1,28 @@
 // About section
 
 @media screen and (max-width: 1024px) {
+  .main-name-section {
+    .main-video-wrapper {
+      display: none;
+    }
+  }
+
   .main-img-wrapper {
     width: 50%;
     span {
       height: 90%;
       width: 52%;
+    }
+  }
+
+  .main-buttons {
+    a {
+      margin: 0;
+    }
+
+    :nth-child(3) {
+      display: block;
+      text-align: center;
     }
   }
 }
@@ -152,6 +169,17 @@
       min-width: 100%;
     }
   }
+
+  .main-buttons {
+    a {
+      margin: 0;
+    }
+
+    :nth-child(3) {
+      display: none;
+    }
+  }
+
   // Circling animation
   .main-img-wrapper {
     img {
@@ -221,6 +249,9 @@
       font-size: 2.3rem;
     }
     .skills-wrapper {
+      h3 {
+        font-size: 1.3rem;
+      }
       .coding-skills,
       .professional-skills {
         max-width: 85%;
